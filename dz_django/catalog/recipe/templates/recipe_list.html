@@ -1,0 +1,91 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container">
+        <h1>Завтрак</h1>
+        <div class="wrap">
+            <ul>
+                {% for i in Завтрак %}
+                    <div class="card">
+                        <h1>{{ i.recipe.title }}</h1>
+                        <p>{{ i.recipe.description }}</p>
+                        <h3>Ингридиенты: {{ i.recipe.ingredients }}</h3>
+
+                        <h3>Инструкция по приготовлению: </h3>
+                        {% for j in i.recipe.instructions %}
+                        <li>{{ j }}</li>
+                        {% endfor %}
+                        <div class="data_author">
+                            <p>{{ i.recipe.created_at }}</p>
+                            <p>{{ i.recipe.created_by }}</p>
+                        </div>
+                    </div>
+                {% endfor %}
+            </ul>
+        </div>
+        <h1>Обед</h1>
+        <div class="wrap">
+            <ul>
+                {% for i in Обед %}
+                    <div class="card">
+                        <h1>{{ i.recipe.title }}</h1>
+                        <p>{{ i.recipe.description }}</p>
+                        <h3>Ингридиенты: {{ i.recipe.ingredients }}</h3>
+
+                        <h3>Инструкция по приготовлению: </h3>
+                        {% for j in i.recipe.instructions %}
+                        <li>{{ j }}</li>
+                        {% endfor %}
+                        <div class="data_author">
+                            <p>{{ i.recipe.created_at }}</p>
+                            <p>{{ i.recipe.created_by }}</p>
+                        </div>
+                    </div>
+                {% endfor %}
+            </ul>
+        </div>
+        <h1>Ужин</h1>
+        <div class="wrap">
+            <ul>
+                {% for i in Ужин %}
+                    <div class="card">
+                        <h1>{{ i.recipe.title }}</h1>
+                        <p>{{ i.recipe.description }}</p>
+                        <h3>Ингридиенты: {{ i.recipe.ingredients }}</h3>
+
+                        <h3>Инструкция по приготовлению: </h3>
+                        {% for j in i.recipe.instructions %}
+                        <li>{{ j }}</li>
+                        {% endfor %}
+                        <div class="data_author">
+                            <p>{{ i.recipe.created_at }}</p>
+                            <p>{{ i.recipe.created_by }}</p>
+                        </div>
+                    </div>
+                {% endfor %}
+            </ul>
+        </div>
+        <h1>Перекус</h1>
+        <div class="wrap">
+            <ul>
+                {% for i in Перекус %}
+                    <div class="card">
+                        <h1>{{ i.recipe.title }}</h1>
+                        <p>{{ i.recipe.description }}</p>
+                        <h3>Ингридиенты: {{ i.recipe.ingredients }}</h3>
+
+                        <h3>Инструкция по приготовлению: </h3>
+                        {% for j in i.recipe.instructions %}
+                        <li>{{ j }}</li>
+                        {% endfor %}
+                        <div class="data_author">
+                            <p>{{ i.recipe.created_at }}</p>
+                            <p>{{ i.recipe.created_by }}</p>
+                        </div>
+                    </div>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+
+{% endblock %}
